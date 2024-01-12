@@ -21,6 +21,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            text-align: center;
         }
 
         label {
@@ -48,6 +49,21 @@
         button:hover {
             background-color: #512e5f; /* Morado más oscuro al pasar el mouse */
         }
+
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .register-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -60,6 +76,9 @@
     <input type="password" id="password" name="password" required>
 
     <button type="submit">Iniciar Sesión</button>
+
+    <a href="#" class="forgot-password">¿Has olvidado tu contraseña?</a>
+    <a href="#" class="register-link">Registrarse</a>
 </form>
 
 </body>
