@@ -82,6 +82,9 @@
 
     <a href="#" class="forgot-password">¿Has olvidado tu contraseña?</a>
     <a href="#" class="register-link">Registrarse</a>
+
+    <!-- Nuevo botón para validar solo la contraseña -->
+    <button type="button" onclick="validarSoloPassword()">Validar Contraseña</button>
 </form>
 
 <script>
@@ -92,8 +95,23 @@
         // Llamar a la función de validación de contraseña
         var passwordValido = validarPassword();
 
+        // Mostrar mensaje si la contraseña no es válida
+        if (!passwordValido) {
+            alert("La contraseña debe tener exactamente 8 caracteres");
+        }
+
         // Devolver true si ambas validaciones son exitosas, de lo contrario, devolver false
         return emailValido && passwordValido;
+    }
+
+    function validarSoloPassword() {
+        // Llamar a la función de validación de contraseña
+        var passwordValido = validarPassword();
+
+        // Mostrar mensaje si la contraseña no es válida
+        if (!passwordValido) {
+            alert("La contraseña debe tener exactamente 8 caracteres");
+        }
     }
 </script>
 
